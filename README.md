@@ -60,7 +60,7 @@ python divide_subimages_train.py
 python train.py -opt options/train/train_RCAN.yml
 ```
 已将原作者的权重进行转换，进行了测试对比是一致的，并且进行了从零训练的对比，第一个batch_size出来的结果是一致的
-权重下载路径[DIV2K](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
+权重下载路径[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
 有三个分支的权重，分别是RCAN_branch1.pdparams、RCAN_branch2.pdparams、RCAN_branch3.pdparams
 
 #### 训练Class_MODEL(Class_RCAN)
@@ -110,7 +110,7 @@ python extract_subimages_test.py
 DIV2K_valid_HR_sub.zip(测试集)
 
 - 需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
-- 权重下载路径[DIV2K](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改权重路径（只需修改/home/aistudio目录，后续子文件夹名字不用修改）
+- 权重下载路径[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改权重路径（只需修改/home/aistudio目录，后续子文件夹名字不用修改）
 ```
 python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 ```
