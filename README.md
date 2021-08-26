@@ -25,23 +25,37 @@ python -m pip install -r requirements.txt
 
 ### 训练
 
-#### 准备数据集
-
+#### 训练SR_MODEL(RCAN) (可不运行，不用管)
 通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
-按顺序运行以下代码处理数据集
-注意修改路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改）
+有两种方式
+- 下载原数据集再用代码处理
+- 直接下载处理好的数据集再分成子类
 
+1. 下载原数据集再用代码处理
+DIV2K_train_HR.zip(训练集)
+DIV2K_train_LR_bicubic_X4.zip(训练集)
+Set5.zip(验证集)
+按顺序运行以下代码处理数据集
+注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
 ```
 cd codes/data_scripts
 python data_augmentation.py
 python generate_mod_LR_bic.py
 python extract_subimages_train.py
-python divide_subimages_train.py (用于训练SR分支，可不运行)
+python divide_subimages_train.py
 ```
 
-#### 训练SR_MODEL(RCAN) (可不运行)
+2. 直接下载处理好的数据集再分成子类
+DIV2K_scale_sub.zip(训练集)
+Set5.zip(验证集)
+按顺序运行以下代码处理数据集
+注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
+```
+cd codes/data_scripts
+python divide_subimages_train.py
+```
 
-- 需要在[train_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改）
+- 需要在[train_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字不用修改）
 ```
 python train.py -opt options/train/train_RCAN.yml
 ```
@@ -50,15 +64,53 @@ python train.py -opt options/train/train_RCAN.yml
 有三个分支的权重，分别是RCAN_branch1.pdparams、RCAN_branch2.pdparams、RCAN_branch3.pdparams
 
 #### 训练Class_MODEL(Class_RCAN)
-- 需要在[train_ClassSR_RCAN.yml](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改），修改三个分支权重的路径（只需要修改/home/aistudio/model_pretrained目录，后续子文件名字可以不用修改）
+##### 下载数据集
+通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+有两种方式
+- 下载原数据集再用代码处理
+- 直接下载处理好的数据集
+
+1. 下载原数据集再用代码处理
+DIV2K_train_HR.zip(训练集)
+DIV2K_train_LR_bicubic_X4.zip(训练集)
+val_10.zip(验证集)
+按顺序运行以下代码处理数据集
+注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
+
+```
+cd codes/data_scripts
+python data_augmentation.py
+python generate_mod_LR_bic.py
+python extract_subimages_train.py
+```
+2. 直接下载处理好的数据集
+DIV2K_scale_sub.zip(训练集)
+val_10.zip(验证集)
+- 需要在[train_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改），修改三个分支权重的路径（只需要修改/home/aistudio/model_pretrained目录，后续子文件名字可以不用修改）
 ```
 python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 ```
 
 ### 测试
+通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+有两种方式
+- 下载原数据集再用代码处理
+- 直接下载处理好的数据集
 
-- 需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_ClassSR_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改）
-- 权重下载路径[DIV2K](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。需要在[test_ClassSR_RCAN.yml](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg)修改权重路径
+1. 下载原数据集再用代码处理
+DIV2K_valid_HR.zip(测试集)
+DIV2K_valid_LR_bicubic_X4.zip(测试集)
+按顺序运行以下代码处理数据集
+注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字可以不用修改）
+```
+cd codes/data_scripts
+python extract_subimages_test.py
+```
+2. 直接下载处理好的数据集
+DIV2K_valid_HR_sub.zip(测试集)
+
+- 需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
+- 权重下载路径[DIV2K](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改权重路径（只需修改/home/aistudio目录，后续子文件夹名字不用修改）
 ```
 python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 ```
@@ -67,16 +119,7 @@ python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 
 
 ```
-├──   # 存放模型文件的路径
-├── Input  # 存放数据集的路径
-├── Output  # 存放程序输出的路径
-    ├── log.txt #日志文件
-├──   # 定义模型，工具等
-├── test.py  # 评估程序
-├── README.md
-├── train.py  # 训练程序
-├── config.py #定义一些参数
-├── requirements.txt #所需环境
+├──   # 之后再放
 
 ```
 
@@ -88,6 +131,6 @@ python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 | 时间 | 2021.08 |
 | 框架版本 | Paddle 2.1.2 |
 | 应用场景 | 图像超分 |
-| 下载链接 | [预训练模型]() 提取码： |
+| 下载链接 | [预训练模型](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd |
 | 飞桨项目 | [欢迎fork]() |
 |  数据集  | [DIV2K]() |
