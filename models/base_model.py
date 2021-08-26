@@ -172,7 +172,7 @@ class BaseModel():
     def save_training_state(self, epoch, iter_step):
         """Save training state during training, which will be used for resuming"""
         state = {'epoch': epoch, 'iter': iter_step, 'schedulers': [], 'optimizers': []}
-        for s in self.schedulers:
+        for s in [self.schedulers]:
             state['schedulers'].append(s.state_dict())
         for o in self.optimizers:
             state['optimizers'].append(o.state_dict())
