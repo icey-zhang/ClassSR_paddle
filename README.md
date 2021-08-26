@@ -141,6 +141,6 @@ python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 | 时间 | 2021.08 |
 | 框架版本 | Paddle 2.1.2 |
 | 应用场景 | 图像超分 |
-| 下载链接 | [预训练模型](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd |
+| 下载链接 | [预训练模型](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd [数据集](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty |
 | 飞桨项目 | [欢迎fork]() |
 |  数据集  | [DIV2K]() |
