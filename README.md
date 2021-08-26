@@ -23,10 +23,12 @@ python -m pip install -r requirements.txt
 
 ## 四、实现
 
-- 权重下载路径（有选择）
+- 权重下载路径（有选择的下载）
+
 [model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
 
-- 数据集下载路径（有选择）
+- 数据集下载路径（有选择的下载）
+
 [DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
 
 
