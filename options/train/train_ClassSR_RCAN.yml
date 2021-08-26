@@ -44,9 +44,9 @@ network_G:
 path:
   pretrain_model_G: ~
   pretrain_model_classifier: ~
-  pretrain_model_G_branch1: /home/aistudio/RCAN_branch1.pdparams
-  pretrain_model_G_branch2: /home/aistudio/RCAN_branch2.pdparams
-  pretrain_model_G_branch3: /home/aistudio/RCAN_branch3.pdparams
+  pretrain_model_G_branch1: /home/aistudio/model_pretrained/RCAN_branch1.pdparams
+  pretrain_model_G_branch2: /home/aistudio/model_pretrained/RCAN_branch2.pdparams
+  pretrain_model_G_branch3: /home/aistudio/model_pretrained/RCAN_branch3.pdparams
   resume_state: ~
   strict_load: true
 
