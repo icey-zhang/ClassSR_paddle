@@ -27,6 +27,7 @@ python -m pip install -r requirements.txt
 
 #### 训练SR_MODEL(RCAN) (可不运行，不用管)
 通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+
 有两种方式
 - 下载原数据集再用代码处理
 - 直接下载处理好的数据集再分成子类
@@ -66,6 +67,7 @@ python train.py -opt options/train/train_RCAN.yml
 #### 训练Class_MODEL(Class_RCAN)
 ##### 下载数据集
 通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+
 有两种方式
 - 下载原数据集再用代码处理
 - 直接下载处理好的数据集
@@ -93,6 +95,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 
 ### 测试
 通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+
 有两种方式
 - 下载原数据集再用代码处理
 - 直接下载处理好的数据集
