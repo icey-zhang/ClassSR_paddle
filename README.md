@@ -65,7 +65,7 @@ python -m pip install -r requirements.txt
 
       val_10.zip(验证集)
 
-#### 下载SR_MODEL的权重
+#### 下载SR_MODEL(RCAN)的权重
 
 已将原作者的权重进行转换，进行了测试对比是一致的，并且进行了从零训练的对比，第一个batch_size出来的结果是一致的
 
