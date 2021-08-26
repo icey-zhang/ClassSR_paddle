@@ -6,15 +6,15 @@ import shutil
 
 
 #divide training data
-LR_folder="/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub/LR"
-GT_folder="/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub/GT"
+LR_folder="/home/aistudio/data_div2k/DIV2K_scale_sub/LR"
+GT_folder="/home/aistudio/data_div2k/DIV2K_scale_sub/GT"
 
-save_list=["/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub_psnr_LR_class3",
-           "/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub_psnr_LR_class2",
-           "/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub_psnr_LR_class1",
-           "/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub_psnr_GT_class3",
-           "/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub_psnr_GT_class2",
-           "/home/data2/zhangjiaqing/DIV2K/DIV2K_scale_sub_psnr_GT_class1"]
+save_list=["/home/aistudio/data_div2k/DIV2K_scale_sub_psnr_LR_class3",
+           "/home/aistudio/data_div2k/DIV2K_scale_sub_psnr_LR_class2",
+           "/home/aistudio/data_div2k/DIV2K_scale_sub_psnr_LR_class1",
+           "/home/aistudio/data_div2k/DIV2K_scale_sub_psnr_GT_class3",
+           "/home/aistudio/data_div2k/DIV2K_scale_sub_psnr_GT_class2",
+           "/home/aistudio/data_div2k/DIV2K_scale_sub_psnr_GT_class1"]
 for i in save_list:
     if os.path.exists(i):
         pass
@@ -23,7 +23,7 @@ for i in save_list:
 threshold=[27.16882,35.149761]
 
 #f1 = open("/data0/xtkong/ClassSR-github/codes/data_scripts/divide_val.log")
-f1 = open("/home/zhangjiaqing/zjq/ClassSR-main_paddle/codes/data_scripts/divide_train.log")
+f1 = open("/home/aistudio/data_div2k/divide_train.log")
 a1 = f1.readlines()
 index=0
 for i in a1:
