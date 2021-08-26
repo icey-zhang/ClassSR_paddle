@@ -23,10 +23,17 @@ python -m pip install -r requirements.txt
 
 ## 四、实现
 
+- 权重下载路径（有选择）
+[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
+
+- 数据集下载路径（有选择）
+[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+
+
 ### 训练 - 训练Class_MODEL(Class_RCAN)
 #### 下载数据集
 
-通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+通过百度云链接下载数据集：
 
 有两种方式
 
@@ -61,7 +68,7 @@ python -m pip install -r requirements.txt
 #### 下载SR_MODEL的权重
 
 已将原作者的权重进行转换，进行了测试对比是一致的，并且进行了从零训练的对比，第一个batch_size出来的结果是一致的
-权重下载路径[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
+
 有三个分支的权重，分别是RCAN_branch1.pdparams、RCAN_branch2.pdparams、RCAN_branch3.pdparams
 
 #### 修改路径
@@ -77,7 +84,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 ### 测试
 #### 下载数据集
 
-通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
+通过百度云链接下载数据集：
 
 有两种方式
 
@@ -105,7 +112,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 
 #### 下载Class_MODEL(Class_RCAN)的权重
 
-权重下载路径[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。
+下载权重ClassSR_RCAN.pdparams。
 
 #### 修改路径
 
