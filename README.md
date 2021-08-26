@@ -1,5 +1,4 @@
 # ClassSR_paddle
-ClassSR_paddle
 ## 一、简介
 本项目采用百度飞桨框架paddlepaddle复现：ClassSR: A General Framework to Accelerate Super-Resolution Networks by Data Characteristic, by Jiaqing Zhang and Kai jiang (张佳青&蒋恺)
 
