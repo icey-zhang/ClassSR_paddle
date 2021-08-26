@@ -27,19 +27,24 @@ python -m pip install -r requirements.txt
 
 #### 训练Class_MODEL(Class_RCAN)
 ##### 下载数据集
+
 通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
 
 有两种方式
+
 - 下载原数据集再用代码处理
 - 直接下载处理好的数据集(建议)
 
 1. 下载原数据集再用代码处理
 
 DIV2K_train_HR.zip(训练集)
+
 DIV2K_train_LR_bicubic_X4.zip(训练集)
+
 val_10.zip(验证集)
 
 按顺序运行以下代码处理数据集
+
 注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
 
 ```
@@ -52,6 +57,7 @@ python extract_subimages_train.py
 2. 直接下载处理好的数据集
 
 DIV2K_scale_sub.zip(训练集)
+
 val_10.zip(验证集)
 
 ##### 下载SR_MODEL的权重
@@ -76,13 +82,18 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 通过百度云链接下载数据集：[DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
 
 有两种方式
+
 - 下载原数据集再用代码处理
 - 直接下载处理好的数据集
 
 1. 下载原数据集再用代码处理
+
 DIV2K_valid_HR.zip(测试集)
+
 DIV2K_valid_LR_bicubic_X4.zip(测试集)
+
 按顺序运行以下代码处理数据集
+
 注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字可以不用修改）
 
 ```
@@ -91,6 +102,7 @@ python extract_subimages_test.py
 ```
 
 2. 直接下载处理好的数据集
+3. 
 DIV2K_valid_HR_sub.zip(测试集)
 
 ##### 下载Class_MODEL(Class_RCAN)的权重
@@ -98,9 +110,11 @@ DIV2K_valid_HR_sub.zip(测试集)
 权重下载路径[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。
 
 ##### 修改路径
+
 - 需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）。修改权重路径（只需修改/home/aistudio/model_pretrained目录，后续子文件夹名字不用修改）
 
 ##### 开始测试
+
 ```
 python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 ```
