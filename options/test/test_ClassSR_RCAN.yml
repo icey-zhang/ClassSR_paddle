@@ -41,7 +41,7 @@ network_G:
 
 #### path
 path:
-  pretrain_model_G: /home/aistudio/ClassSR_RCAN.pdparams
+  pretrain_model_G: /home/aistudio/model_pretrained/ClassSR_RCAN.pdparams
   pretrain_model_classifier: ~
   pretrain_model_G_branch1: ~
   pretrain_model_G_branch2: ~
