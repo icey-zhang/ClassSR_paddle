@@ -70,9 +70,9 @@ python -m pip install -r requirements.txt
 
 #### 开始训练
 
-    ```
-    python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
-    ```
+```
+python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
+```
 
 ### 测试
 #### 下载数据集
@@ -113,9 +113,9 @@ python -m pip install -r requirements.txt
 
 #### 开始测试
 
-    ```
-    python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
-    ```
+```
+python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
+```
 
 ## 五、代码结构
 
