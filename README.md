@@ -41,7 +41,7 @@ python divide_subimages_train.py (用于训练SR分支，可不运行)
 
 #### 训练SR_MODEL(RCAN) (可不运行)
 
-- 需要在[train_RCAN.yml](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改）
+- 需要在[train_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改）
 ```
 python train.py -opt options/train/train_RCAN.yml
 ```
@@ -57,7 +57,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 
 ### 测试
 
-- 需要在[test_ClassSR_RCAN.yml](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改）
+- 需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_ClassSR_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字可以不用修改）
 - 权重下载路径[DIV2K](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。需要在[test_ClassSR_RCAN.yml](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg)修改权重路径
 ```
 python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
