@@ -56,7 +56,7 @@ cd codes/data_scripts
 python divide_subimages_train.py
 ```
 
-- 需要在[train_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/DIV2K目录，后续子文件名字不用修改）
+- 需要在[train_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
 ```
 python train.py -opt options/train/train_RCAN.yml
 ```
@@ -113,7 +113,7 @@ python extract_subimages_test.py
 DIV2K_valid_HR_sub.zip(测试集)
 
 - 需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
-- 权重下载路径[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改权重路径（只需修改/home/aistudio目录，后续子文件夹名字不用修改）
+- 权重下载路径[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd 下载权重ClassSR_RCAN.pdparams。需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改权重路径（只需修改/home/aistudio/model_pretrained目录，后续子文件夹名字不用修改）
 ```
 python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 ```
