@@ -10,6 +10,11 @@ code：[ClassSR](https://github.com/Xiangtaokong/ClassSR)
 
 ## 二、复现结果
 
+| - | Model | Test2K | FLOPs |
+|  ----  |  ----  |  ----  |  ----  |
+| 原论文 | ClassSR-RCAN | 26.39dB | 21.22G(65%) |
+| 复现 | ClassSR-RCAN | dB | - |
+
 ![Results](https://github.com/icey-zhang/ClassSR_paddle/blob/main/results/ClassSR_result.png)
 
 ## 三、环境依赖
