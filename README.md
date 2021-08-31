@@ -96,8 +96,11 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 - 直接下载处理好的数据集
 
   1. 下载原数据集再用代码处理
+  
       [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/55117)
+      
       trainHR_1201to1400.zip(测试集)
+      
       按顺序运行以下代码处理数据集
 
       注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字可以不用修改）
