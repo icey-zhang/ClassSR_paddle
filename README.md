@@ -96,23 +96,20 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 - 直接下载处理好的数据集
 
   1. 下载原数据集再用代码处理
-
-      DIV2K_valid_HR.zip(测试集)
-
-      DIV2K_valid_LR_bicubic_X4.zip(测试集)
-
+      [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/55117)
+      trainHR_1201to1400.zip(测试集)
       按顺序运行以下代码处理数据集
 
       注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字可以不用修改）
 
       ```
       cd codes/data_scripts
-      python extract_subimages_test.py
+      python test2k.py
       ```
 
   2. 直接下载处理好的数据集
 
-      DIV2K_valid_HR_sub.zip(测试集)
+      test2k.zip(测试集)
 
 #### 下载Class_MODEL(Class_RCAN)的权重
 
