@@ -10,7 +10,7 @@ code：[ClassSR](https://github.com/Xiangtaokong/ClassSR)
 
 ## 二、复现结果
 
-![Generated Results]()
+![Results](https://github.com/icey-zhang/ClassSR_paddle/blob/main/results/ClassSR_result.png)
 
 ## 三、环境依赖
 
