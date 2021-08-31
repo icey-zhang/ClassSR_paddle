@@ -61,10 +61,13 @@ python -m pip install -r requirements.txt
       ```
 
   2. 直接下载处理好的数据集
+  
+      [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748)
 
       DIV2K_scale_sub.zip(训练集)
 
       val_10.zip(验证集)
+      
 
 #### 下载SR_MODEL(RCAN)的权重
 
@@ -113,7 +116,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 
 #### 下载Class_MODEL(Class_RCAN)的权重
 
-下载权重ClassSR_RCAN.pdparams。
+下载权重latest_G.pdparams。
 
 #### 修改路径
 
