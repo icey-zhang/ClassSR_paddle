@@ -50,7 +50,7 @@ python -m pip install -r requirements.txt
 
       按顺序运行以下代码处理数据集
 
-      注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
+      **注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）
 
       ```
       cd codes/data_scripts
@@ -102,7 +102,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
       
       按顺序运行以下代码处理数据集
 
-      注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字可以不用修改）
+      **注意修改路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字可以不用修改）
 
       ```
       cd codes/data_scripts
