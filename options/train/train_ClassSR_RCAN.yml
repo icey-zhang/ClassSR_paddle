@@ -29,8 +29,6 @@ datasets:
   val:
     name: DIV2K10
     mode: LQGT_rcan
-    # dataroot_GT: /home/aistudio/DIV2K/DIV2K_valid_HR_sub/GT
-    # dataroot_LQ: /home/aistudio/DIV2K/DIV2K_valid_HR_sub/LR
     dataroot_GT: /home/aistudio/data_div2k/val_10/HR
     dataroot_LQ: /home/aistudio/data_div2k/val_10/LR
     
@@ -56,7 +54,7 @@ train:
   lr_scheme: CosineAnnealingLR_Restart
   beta1: 0.9
   beta2: 0.99
-  niter: 1000 #200000
+  niter: 200000
   warmup_iter: -1  # no warm up
   T_period: [500000, 20000]
   restarts: [500000]
@@ -73,5 +71,5 @@ train:
 
 #### logger
 logger:
-  print_freq: 10 #100
-  save_checkpoint_freq: !!float 10 #2000
+  print_freq: 100
+  save_checkpoint_freq: !!float 2000
