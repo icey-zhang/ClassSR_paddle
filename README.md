@@ -4,6 +4,7 @@
 
 
 paper：[ClassSR: A General Framework to Accelerate Super-Resolution Networks by Data Characteristic](https://openaccess.thecvf.com/content/CVPR2021/papers/Kong_ClassSR_A_General_Framework_to_Accelerate_Super-Resolution_Networks_by_Data_CVPR_2021_paper.pdf)
+
 code：[ClassSR](https://github.com/Xiangtaokong/ClassSR)
 
 本代码包含了原论文的默认配置下的训练和测试代码。
