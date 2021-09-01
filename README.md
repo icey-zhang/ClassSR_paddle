@@ -98,7 +98,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 有两种方式
 
 - 下载原数据集再用代码处理
-- 直接下载处理好的数据集
+- 直接下载处理好的数据集 (建议)
 
   1. 下载原数据集再用代码处理
   
@@ -116,8 +116,10 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
       ```
 
   2. 直接下载处理好的数据集
+  
+     [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748)
 
-      test2k.zip(测试集)
+      test2K.zip(测试集)
 
 #### 下载Class_MODEL(Class_RCAN)的权重
 
