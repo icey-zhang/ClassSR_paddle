@@ -9,9 +9,9 @@ import data.util as util
 num = 1301 #1201-1300
 #we first downsample the original images with scaling factors 0.6, 0.7, 0.8, 0.9 to generate the HR/LR images.
 for scale in [0.25]:
-    GT_folder = '/home/aistudio/data/data55117/test8k'#'/data0/xtkong/data/DIV2K800_GT'
-    save_GT_folder = '/home/aistudio/test2K/GT'
-    save_LR_folder = '/home/aistudio/test2K/LR'
+    GT_folder = '/home/aistudio/data/data55117/test8k'#'/data0/xtkong/data/DIV2K800_GT' #数据读取路径 
+    save_GT_folder = '/home/aistudio/test2K/GT' #数据保存路径  test2K/GT 不需要修改
+    save_LR_folder = '/home/aistudio/test2K/LR' #数据保存路径  test2K/LR 不需要修改
     for i in [save_GT_folder]:
         if os.path.exists(i):
             pass
