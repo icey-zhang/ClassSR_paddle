@@ -14,22 +14,8 @@ datasets:
   test_1:
     name: test2k
     mode: LQGT_rcan
-    # dataroot_GT: /home/aistudio/DIV2K/DIV2K_valid_HR_sub/GT
-    # dataroot_LQ: /home/aistudio/DIV2K/DIV2K_valid_HR_sub/LR
-    dataroot_GT: /home/aistudio/data_div2k/DIV2K_valid_HR
-    dataroot_LQ: /home/aistudio/data_div2k/DIV2K_valid_LR_bicubic/X4
-    # dataroot_GT: /home/aistudio/data_div2k/val_10/HR
-    # dataroot_LQ: /home/aistudio/data_div2k/val_10/LR
-  # test_2:
-  #   name: test4k
-  #   mode: LQGT_rcan
-  #   dataroot_GT: /data0/xtkong/data/test4k/HR/X4
-  #   dataroot_LQ: /data0/xtkong/data/test4k/LR/X4
-  # test_3:
-  #   name: test8k
-  #   mode: LQGT_rcan
-  #   dataroot_GT: /data0/xtkong/data/test8k/HR/X4
-  #   dataroot_LQ: /data0/xtkong/data/test8k/LR/X4
+    dataroot_GT: /home/aistudio/data_div2k/test2K/GT
+    dataroot_LQ: /home/aistudio/data_div2k/test2K/LR
 
 
 #### network structures
@@ -41,7 +27,7 @@ network_G:
 
 #### path
 path:
-  pretrain_model_G: /home/aistudio/model_pretrained/ClassSR_RCAN.pdparams
+  pretrain_model_G: /home/aistudio/model_pretrained/latest_G.pdparams
   pretrain_model_classifier: ~
   pretrain_model_G_branch1: ~
   pretrain_model_G_branch2: ~
