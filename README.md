@@ -146,5 +146,5 @@ python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 | 框架版本 | Paddle 2.1.2 |
 | 应用场景 | 图像超分 |
 | 模型权重 | [model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd |
-| 飞桨项目 | 待发布 [欢迎fork]() |
+| 飞桨项目 | [欢迎fork](https://aistudio.baidu.com/aistudio/projectdetail/2313539?shared=1) |
 |  数据集  | [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104667) [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748) [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/55117) |
