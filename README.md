@@ -133,7 +133,18 @@ python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 
 
 ```
-├──   # 之后再放
+./ClassSR_paddle
+├─data             
+├─data_scripts                                          
+├─models               #模型
+├─options              #配置文件
+├─results              #日志文件
+├─utils                #一下API                                               
+|  README.md                               
+│  train.py            #分支训练
+│  test.py             #分支测试
+│  train_ClassSR.py    #ClassSR训练
+│  test_ClassSR.py     #ClassSR测试
 
 ```
 
