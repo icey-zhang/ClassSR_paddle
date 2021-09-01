@@ -72,7 +72,7 @@ python -m pip install -r requirements.txt
 
 已将原作者的权重进行转换，进行了测试对比是一致的，并且进行了从零训练的对比，第一个batch_size出来的结果是一致的
 
-有三个分支的权重，分别是RCAN_branch1.pdparams、RCAN_branch2.pdparams、RCAN_branch3.pdparams [model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
+有三个分支的权重，分别是RCAN_branch1.pdparams、RCAN_branch2.pdparams、RCAN_branch3.pdparams。[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
 
 #### 修改路径
 
@@ -117,7 +117,7 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 
 #### 下载Class_MODEL(Class_RCAN)的权重
 
-下载权重latest_G.pdparams[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd。
+下载权重latest_G.pdparams。[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd。
 
 #### 修改路径
 
