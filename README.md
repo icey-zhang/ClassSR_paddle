@@ -27,16 +27,8 @@ python -m pip install -r requirements.txt
 
 ## 四、实现
 
-- 权重下载路径（有选择的下载）
-
-    [model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
-
-- 数据集下载路径（有选择的下载）
-
-    [DIV2K](https://pan.baidu.com/s/12eTTMe_yk7WgQ7aZnYbnDg) 提取码：jcty
-
-
 ### 训练 - 训练Class_MODEL(Class_RCAN)
+
 #### 下载数据集
 
 通过百度云链接下载数据集：
@@ -47,6 +39,8 @@ python -m pip install -r requirements.txt
 - 直接下载处理好的数据集(建议)
 
   1. 下载原数据集再用代码处理
+      
+      [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104667)
 
       DIV2K_train_HR.zip(训练集)
 
@@ -75,6 +69,8 @@ python -m pip install -r requirements.txt
       
 
 #### 下载SR_MODEL(RCAN)的权重
+
+[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
 
 已将原作者的权重进行转换，进行了测试对比是一致的，并且进行了从零训练的对比，第一个batch_size出来的结果是一致的
 
@@ -122,6 +118,8 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
       test2K.zip(测试集)
 
 #### 下载Class_MODEL(Class_RCAN)的权重
+
+[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd
 
 下载权重latest_G.pdparams。
 
