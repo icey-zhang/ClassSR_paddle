@@ -130,7 +130,7 @@ def crop_border(img_list, crop_border):
 
 def tensor2img(tensor, out_type=np.uint8, min_max=(0, 1)):
     '''
-    Converts a torch Tensor into an image Numpy array
+    Converts a Tensor into an image Numpy array
     Input: 4D(B,(3/1),H,W), 3D(C,H,W), or 2D(H,W), any range, RGB channel order
     Output: 3D(H,W,C) or 2D(H,W), [0,255], np.uint8 (default)
     '''
@@ -196,9 +196,9 @@ def DUF_downsample(x, scale=4):
 
 
 def single_forward(model, inp):
-    """PyTorch model forward (single test), it is just a simple warpper
+    """ model forward (single test), it is just a simple warpper
     Args:
-        model (PyTorch model)
+        model
         inp (Tensor): inputs defined by the model
 
     Returns:
@@ -217,7 +217,7 @@ def single_forward(model, inp):
 def flipx4_forward(model, inp):
     """Flip testing with X4 self ensemble, i.e., normal, flip H, flip W, flip H and W
     Args:
-        model (PyTorch model)
+        model
         inp (Tensor): inputs defined by the model
 
     Returns:
@@ -346,8 +346,3 @@ class ProgressBar(object):
             sys.stdout.write('completed: {}, elapsed: {}s, {:.1f} tasks/s'.format(
                 self.completed, int(elapsed + 0.5), fps))
         sys.stdout.flush()
-
-
-# ## torchvision.utils.make_grid 源码转换
-# def make_grid(tensor, nrow):
-#     print(1)
