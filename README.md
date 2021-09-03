@@ -14,7 +14,7 @@ code：[ClassSR](https://github.com/Xiangtaokong/ClassSR)
 | - | Model | Test2K | FLOPs |
 |  ----  |  ----  |  ----  |  ----  |
 | 原论文 | ClassSR-RCAN | 26.39dB | 21.22G(65%) |
-| 复现 | ClassSR-RCAN | 26.38dB | 23.06(70.73%) |
+| 复现 | ClassSR-RCAN | 26.39dB | 23.06(70.73%) |
 
 ![Results](https://github.com/icey-zhang/ClassSR_paddle/blob/main/results/ClassSR_result.png)
 
