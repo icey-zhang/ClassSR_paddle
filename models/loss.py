@@ -1,5 +1,3 @@
-# import torch
-# import torch.nn as nn
 import paddle
 import paddle.nn as nn
 class class_loss_3class(nn.Layer):
@@ -86,25 +84,3 @@ class GANLoss(nn.Layer):
         loss = self.loss(input, target_label)
         return loss
 
-
-# class GradientPenaltyLoss(nn.Layer):
-#     def __init__(self, device=paddle.device('cpu')):
-#         super(GradientPenaltyLoss, self).__init__()
-#         self.register_buffer('grad_outputs', paddle.to_tensor())
-#         self.grad_outputs = self.grad_outputs#.to(device)
-
-#     def get_grad_outputs(self, input):
-#         if self.grad_outputs.size() != input.size():
-#             self.grad_outputs.resize_(input.size()).fill_(1.0)
-#         return self.grad_outputs
-
-#     def forward(self, interp, interp_crit):
-#         grad_outputs = self.get_grad_outputs(interp_crit)
-#         grad_interp = paddle.grad(outputs=interp_crit, inputs=interp,
-#                                           grad_outputs=grad_outputs, create_graph=True,
-#                                           retain_graph=True, only_inputs=True)[0]
-#         grad_interp = grad_interp.view(grad_interp.size(0), -1)
-#         grad_interp_norm = grad_interp.norm(2, dim=1)
-
-#         loss = ((grad_interp_norm - 1)**2).mean()
-#         return loss
