@@ -16,8 +16,6 @@ def main():
     #### options
     parser = argparse.ArgumentParser()
     parser.add_argument('-opt',default='options/train/train_ClassSR_RCAN.yml', type=str, help='Path to option YAML file.')
-    parser.add_argument('--launcher', choices=['none', 'pytorch'], default='none',
-                        help='job launcher')
     parser.add_argument('--local_rank', type=int, default=0)
     args = parser.parse_args()
     opt = option.parse(args.opt, is_train=True)
