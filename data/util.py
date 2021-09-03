@@ -118,7 +118,6 @@ def read_img_seq(path):
     else:
         img_path_l = sorted(glob.glob(os.path.join(path, '*')))
     img_l = [read_img(None, v) for v in img_path_l]
-    # stack to Torch tensor
     imgs = np.stack(img_l, axis=0)
     imgs = imgs[:, :, :, [2, 1, 0]]
     imgs = paddle.to_tensor(np.ascontiguousarray(np.transpose(imgs, (0, 3, 1, 2))))#.float()
