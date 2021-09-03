@@ -2,9 +2,7 @@ import logging
 from collections import OrderedDict
 import paddle
 import paddle.nn as nn
-# from paddle.DataParallel import DataParallel
 import models.networks as networks
-# import models.lr_scheduler as lr_scheduler
 from .base_model import BaseModel
 from models.loss import CharbonnierLoss
 
@@ -16,24 +14,12 @@ class SRModel(BaseModel):
     def __init__(self, opt):
         super(SRModel, self).__init__(opt)
 
-
-
-        # if opt['dist']:
-        #     self.rank = torch.distributed.get_rank()
-        # else:
         self.rank = -1  # non dist training
         train_opt = opt['train']
 
         # define network and load pretrained models
         self.netG = networks.define_G(opt)
 
-
-        # if opt['dist']:
-        #     self.netG = DistributedDataParallel(self.netG, device_ids=[torch.cuda.current_device()])
-        # else:
-        # self.netG = DataParallel(self.netG)
-        # print network
-        # self.print_network() #打印模型
         self.load()
 
         if self.is_train:
@@ -51,63 +37,17 @@ class SRModel(BaseModel):
                 raise NotImplementedError('Loss type [{:s}] is not recognized.'.format(loss_type))
             self.l_pix_w = train_opt['pixel_weight']
 
-            # optimizers
-            #wd_G = train_opt['weight_decay_G'] if train_opt['weight_decay_G'] else 0
-            #optim_params = []
-            #for k, v in self.netG.named_parameters():  # can optimize for a part of the model
-                #if v.requires_grad:
-                #     optim_params.append(v)
-                # else:
-                #     if self.rank <= 0:
-                #         logger.warning('Params [{:s}] will not optimize.'.format(k))
-            # self.optimizer_G = paddle.optimizer.Adam(parameters=optim_params, learning_rate=train_opt['lr_G'],
-            #                                     weight_decay=wd_G,
-            #                                     beta1=train_opt['beta1'],beta2= train_opt['beta2'])
-            # self.optimizers.append(self.optimizer_G)
-
-            # # schedulers         
-            # if train_opt['lr_scheme'] == 'MultiStepLR':
-            #     for optimizer in self.optimizers:
-            #         self.schedulers.append(paddle.optimizer.lr.MultiStepDecay(learning_rate=train_opt['lr_G'],milestones=[1600],gamma=train_opt['lr_gamma']))
-            # elif train_opt['lr_scheme'] == 'CosineAnnealingLR_Restart':
-            #     for optimizer in self.optimizers:
-            #         self.schedulers.append(paddle.optimizer.lr.CosineAnnealingDecay(learning_rate=train_opt['lr_G'], T_max=10, verbose=True))
-            
-
-
+      
 
             # schedulers   
             wd_G = train_opt['weight_decay_G'] if train_opt['weight_decay_G'] else 0      
             if train_opt['lr_scheme'] == 'MultiStepLR':
-                # for optimizer in self.optimizers:
                 self.schedulers=paddle.optimizer.lr.MultiStepDecay(learning_rate=train_opt['lr_G'],weight_decay=wd_G,gamma=train_opt['lr_gamma'])
             elif train_opt['lr_scheme'] == 'CosineAnnealingLR_Restart':
-                # for optimizer in self.optimizers:
                 self.schedulers=paddle.optimizer.lr.CosineAnnealingDecay(learning_rate=train_opt['lr_G'], T_max=train_opt['T_period'],eta_min=train_opt['eta_min'])
-            # self.optimizer_G = paddle.optimizer.Adam(parameters=optim_params, learning_rate=train_opt['lr_G'],
-            #                                     weight_decay=wd_G,
-            #                                     beta1=train_opt['beta1'],beta2= train_opt['beta2'])
             self.optimizer_G = paddle.optimizer.Adam(parameters=self.netG.parameters(), learning_rate=self.schedulers, beta1=train_opt['beta1'], beta2=train_opt['beta2'])
             
             self.optimizers.append(self.optimizer_G)
-
-
-            # if train_opt['lr_scheme'] == 'MultiStepLR':
-            #     for optimizer in self.optimizers:
-            #         self.schedulers.append(
-            #             lr_scheduler.MultiStepLR_Restart(optimizer, train_opt['T_period'],
-            #                                              restarts=train_opt['restarts'],
-            #                                              weights=train_opt['restart_weights'],
-            #                                              gamma=train_opt['lr_gamma'],
-            #                                              clear_state=train_opt['clear_state']))
-            # elif train_opt['lr_scheme'] == 'CosineAnnealingLR_Restart':
-            #     for optimizer in self.optimizers:
-            #         self.schedulers.append(
-            #             lr_scheduler.CosineAnnealingLR_Restart(
-            #                 optimizer, train_opt['T_period'], eta_min=train_opt['eta_min'],
-            #                 restarts=train_opt['restarts'], weights=train_opt['restart_weights']))
-            # else:
-            #     raise NotImplementedError('MultiStepLR learning rate scheme is enough.')
 
             self.log_dict = OrderedDict()
 
@@ -146,10 +86,6 @@ class SRModel(BaseModel):
 
     def print_network(self):
         s, n = self.get_network_description(self.netG)
-        # if isinstance(self.netG, nn.DataParallel) or isinstance(self.netG, DistributedDataParallel):
-        #     net_struc_str = '{} - {}'.format(self.netG.__class__.__name__,
-        #                                      self.netG.module.__class__.__name__)
-        # else:
         net_struc_str = '{}'.format(self.netG.__class__.__name__)
         if self.rank <= 0:
             logger.info('Network G structure: {}, with parameters: {:,d}'.format(net_struc_str, n.item()))
