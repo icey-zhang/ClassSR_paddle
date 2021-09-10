@@ -11,25 +11,25 @@ code：[ClassSR](https://github.com/Xiangtaokong/ClassSR)
 
 ## 二、复现结果
 
-branch1
+RCAN-branch1
 | - | Model | test5 |
 |  ----  |  ----  |  ----  |
 | 原论文 | RCAN | 30.275883dB |
 | 复现 | RCAN | 30.279163dB |
 
-branch2
+RCAN-branch2
 | - | Model | test5 |
 |  ----  |  ----  |  ----  |
 | 原论文 | RCAN | 30.593692dB |
 | 复现 | RCAN | -dB |
 
-branch3
+RCAN-branch3
 | - | Model | test5 |
 |  ----  |  ----  |  ----  |
 | 原论文 | RCAN | 30.430947dB |
 | 复现 | RCAN | -dB |
 
-
+ClassSR-RCAN
 | - | Model | Test2K | FLOPs |
 |  ----  |  ----  |  ----  |  ----  |
 | 原论文 | ClassSR-RCAN | 26.39dB | 21.22G(65%) |
