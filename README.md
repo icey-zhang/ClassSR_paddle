@@ -14,19 +14,19 @@ code：[ClassSR](https://github.com/Xiangtaokong/ClassSR)
 RCAN-branch1
 | - | Model | test5 |
 |  ----  |  ----  |  ----  |
-| 原论文 | RCAN | 30.275883dB |
-| 复现 | RCAN | 30.279163dB |
+| 原论文 | RCAN | 30.275dB |
+| 复现 | RCAN | 30.279dB |
 
 RCAN-branch2
 | - | Model | test5 |
 |  ----  |  ----  |  ----  |
-| 原论文 | RCAN | 30.593692dB |
-| 复现 | RCAN | -dB |
+| 原论文 | RCAN | 30.593dB |
+| 复现 | RCAN | 30.139dB |
 
 RCAN-branch3
 | - | Model | test5 |
 |  ----  |  ----  |  ----  |
-| 原论文 | RCAN | 30.430947dB |
+| 原论文 | RCAN | 30.430dB |
 | 复现 | RCAN | -dB |
 
 ClassSR-RCAN
