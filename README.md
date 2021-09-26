@@ -12,16 +12,16 @@ code：[ClassSR](https://github.com/Xiangtaokong/ClassSR)
 ## 二、复现结果
 
 RCAN-branch1
-| - | Model | test5 |
-|  ----  |  ----  |  ----  |
-| 原论文 | RCAN | 30.275dB |
-| 复现 | RCAN | 30.279dB |
+| - | Model | iteration| test5 |
+|  ----  |  ----  |  ----  |   ----  |
+| 原论文 | RCAN | - | 30.275dB |
+| 复现 | RCAN | 50w | 30.279dB |
 
 RCAN-branch2
-| - | Model | test5 |
-|  ----  |  ----  |  ----  |
-| 原论文 | RCAN | 30.593dB |
-| 复现 | RCAN | 30.139dB |
+| - | Model | iteration| test5 |
+|  ----  |  ----  |  ----  | ----  |
+| 原论文 | RCAN | - | 30.593dB |
+| 复现 | RCAN | 100w | 30.216dB |
 
 RCAN-branch3
 | - | Model | test5 |
@@ -33,7 +33,8 @@ ClassSR-RCAN
 | - | Model | Test2K | FLOPs |
 |  ----  |  ----  |  ----  |  ----  |
 | 原论文 | ClassSR-RCAN | 26.39dB | 21.22G(65%) |
-| 复现 | ClassSR-RCAN | 26.39dB | 23.06(70.73%) |
+| 复现用作者的分支权重 | ClassSR-RCAN | 26.39dB | 23.06(70.73%) |
+| 复现用自己训的分支权重 | ClassSR-RCAN |  |  |
 
 ![Results](https://github.com/icey-zhang/ClassSR_paddle/blob/main/results/ClassSR_result.png)
 
