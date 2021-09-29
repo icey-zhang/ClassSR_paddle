@@ -50,7 +50,7 @@ path:
 
 #### training settings: learning rate scheme, loss
 train:
-  lr_G: !!float 2e-4 #3e-5
+  lr_G: !!float 3e-5
   lr_scheme: CosineAnnealingLR_Restart
   beta1: 0.9
   beta2: 0.99
