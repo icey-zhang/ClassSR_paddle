@@ -67,7 +67,7 @@ train:
   average_loss_w: 3
 
   manual_seed: 10
-  val_freq: !!float 100
+  val_freq: !!float 1000
 
 #### logger
 logger:
