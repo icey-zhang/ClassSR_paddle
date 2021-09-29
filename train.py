@@ -1,6 +1,4 @@
 import os
-###显卡设置
-os.environ['CUDA_VISIBLE_DEVICES'] = "3"
 import math
 import argparse
 import random
@@ -18,7 +16,7 @@ import paddle
 def main():
     #### options
     parser = argparse.ArgumentParser()
-    parser.add_argument('-opt', type=str,default='options/train/train_RCAN3.yml', help='Path to option YAML file.')
+    parser.add_argument('-opt', type=str,default='options/train/train_RCAN.yml', help='Path to option YAML file.')
     parser.add_argument('--launcher', choices=['none'], default='none',
                         help='job launcher')
     parser.add_argument('--local_rank', type=int, default=0)
