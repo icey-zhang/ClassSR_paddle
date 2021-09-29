@@ -48,8 +48,8 @@ python -m pip install -r requirements.txt
 
 ## 四、实现
 
-### 测试
-#### 下载数据集
+### 1. 测试
+#### 1）下载数据集
 
 下载处理好的数据集
 
@@ -57,32 +57,32 @@ python -m pip install -r requirements.txt
 
     test2K.zip(测试集)
 
-#### 下载Class_MODEL(Class_RCAN)的权重
+#### 2）下载Class_MODEL(Class_RCAN)的权重
 
 下载权重latest_G.pdparams。[model_pretrained](https://pan.baidu.com/s/1B4DdsBDaiH74uwcp-oMosw) 提取码：zxpd。
 
-#### 修改路径
+#### 3）修改路径
 
 需要在[test_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/test/test_ClassSR_RCAN.yml)修改数据集路径（只需要修改/home/aistudio/data_div2k目录，后续子文件名字不用修改）。修改权重路径（只需修改/home/aistudio/model_pretrained目录，后续子文件夹名字不用修改）
 
-#### 开始测试
+#### 4）开始测试
 
 ```
 python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 ```
 
-### 训练 
-- 训练SR_MODEL(RCAN)
-直接下载处理好的数据集
+### 2. 训练 SR_MODEL(RCAN)
+#### 1）下载数据集
+下载处理好的数据集
 
       [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748) 
   
-#### 修改路径
+#### 2）修改路径
 
 需要在[train_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train)修改train_RCAN.yml（branch1）、train_RCAN2.yml（branch2）、train_RCAN3.yml（branch3）数据集路径   
 
 
-#### 开始训练
+####  3）开始训练
 
 ```
 python train_ClassSR.py -opt options/train/train_RCAN.yml
@@ -94,9 +94,9 @@ python train_ClassSR.py -opt options/train/train_RCAN2.yml
 python train_ClassSR.py -opt options/train/train_RCAN3.yml
 ```
 
-- 训练Class_MODEL(Class_RCAN)
+### 3. 训练Class_MODEL(Class_RCAN)
 
-#### 下载数据集
+#### 1）下载数据集
 
 直接下载处理好的数据集
   
@@ -106,11 +106,11 @@ python train_ClassSR.py -opt options/train/train_RCAN3.yml
 
       val_10.zip(验证集)
 
-#### 修改路径
+#### 2）修改路径
 
 需要在[train_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train/train_ClassSR_RCAN.yml)修改数据集路径，修改三个分支权重的路径
 
-#### 开始训练
+#### 3）开始训练
 
 ```
 python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
