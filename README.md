@@ -34,7 +34,7 @@ ClassSR-RCAN
 |  ----  |  ----  |  ----  |  ----  |
 | 原论文 | ClassSR-RCAN | 26.39dB | 21.22G(65%) |
 | 复现第一次用作者的分支权重 | ClassSR-RCAN | 26.39dB | 23.06(70.73%) |
-| 复现用自己训的分支权重 | ClassSR-RCAN | 26.38dB | 21.36(65.5%) |
+| 复现用自己训的分支权重 | ClassSR-RCAN | - | - |
 
 ![Results](https://github.com/icey-zhang/ClassSR_paddle/blob/main/results/ClassSR_result.png)
 
