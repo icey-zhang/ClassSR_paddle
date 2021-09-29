@@ -27,7 +27,7 @@ RCAN-branch3
 | - | Model |iteration| test5 |
 |  ----  |  ----  |  ----  |----  |
 | 原论文 | RCAN | -| 30.430dB |
-| 复现 | RCAN | 97.55w | 30.005dB |
+| 复现 | RCAN | 97.55w | 30.395dB |
 
 ClassSR-RCAN
 | - | Model | Test2K | FLOPs |
