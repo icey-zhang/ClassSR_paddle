@@ -21,7 +21,7 @@ RCAN-branch2
 | - | Model | iteration| test5 |
 |  ----  |  ----  |  ----  | ----  |
 | 原论文 | RCAN | - | 30.593dB |
-| 复现 | RCAN | 100w | 30.395dB |
+| 复现 | RCAN | 99w | 30.492dB |
 
 RCAN-branch3
 | - | Model |iteration| test5 |
