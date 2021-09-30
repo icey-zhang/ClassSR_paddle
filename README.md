@@ -75,8 +75,8 @@ python test_ClassSR.py -opt options/test/test_ClassSR_RCAN.yml
 #### 1）下载数据集
 下载处理好的数据集
 
-      [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748) 
-  
+[下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748) 
+
 #### 2）修改路径
 
 需要在[train_ClassSR_RCAN.yml](https://github.com/icey-zhang/ClassSR_paddle/blob/main/options/train)修改train_RCAN.yml（branch1）、train_RCAN2.yml（branch2）、train_RCAN3.yml（branch3）数据集路径   
@@ -99,12 +99,12 @@ python train_ClassSR.py -opt options/train/train_RCAN3.yml
 #### 1）下载数据集
 
 直接下载处理好的数据集
-  
-      [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748)
 
-      DIV2K_scale_sub.zip(训练集)
-
-      val_10.zip(验证集)
+[下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748)
+    
+DIV2K_scale_sub.zip(训练集)
+    
+val_10.zip(验证集)
 
 #### 2）修改路径
 
