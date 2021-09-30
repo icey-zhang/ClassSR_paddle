@@ -33,7 +33,7 @@ ClassSR-RCAN
 | -                      | Model        | Test2K  | FLOPs         |
 | ---------------------- | ------------ | ------- | ------------- |
 | 原论文                 | ClassSR-RCAN | 26.39dB | 21.22G(65%)   |
-| 复现 | ClassSR-RCAN | -       | -             |
+| 复现 | ClassSR-RCAN | 26.38dB | 21.36(65.5%) |
 
 ![Results](https://github.com/icey-zhang/ClassSR_paddle/blob/main/results/ClassSR_result.png)
 
@@ -58,7 +58,7 @@ python -m pip install -r requirements.txt
 
 #### 2）下载Class_MODEL(Class_RCAN)的权重
 
-下载权重latest_G.pdparams。[权重](链接：https://pan.baidu.com/s/1wiIQb-dC-mBYFMJZVZa3pw ) 提取码：i58k。
+下载权重latest_G.pdparams。[权重](https://pan.baidu.com/s/1wiIQb-dC-mBYFMJZVZa3pw) 提取码：i58k。
 
 #### 3）修改路径
 
@@ -142,5 +142,5 @@ python train_ClassSR.py -opt options/train/train_ClassSR_RCAN.yml
 | 时间     | 2021.08                                                      |
 | 框架版本 | Paddle 2.1.2                                                 |
 | 应用场景 | 图像超分                                                     |
-| 模型权重 | [权重](链接：https://pan.baidu.com/s/1wiIQb-dC-mBYFMJZVZa3pw ) 提取码：i58k |
+| 模型权重 | [权重](https://pan.baidu.com/s/1wiIQb-dC-mBYFMJZVZa3pw) 提取码：i58k |
 | 数据集   | [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104667) [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/105748) [下载链接aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/55117) |
