@@ -40,7 +40,7 @@ class CALayer(nn.Layer):
 class RCAB(nn.Layer):
     def __init__(
         self, conv, n_feat, kernel_size, reduction,
-        bias_attr=True, bn=False, act=nn.ReLU(True), res_scale=1):
+        bias_attr=init.Constant(value=0.), bn=False, act=nn.ReLU(True), res_scale=1):
 
         super(RCAB, self).__init__()
         modules_body = []
@@ -123,7 +123,7 @@ class RCAN(nn.Layer):
         kernel_size = 3
         reduction = reduction 
         scale = scale
-        act = nn.ReLU(True)
+        act = nn.ReLU()
         
         # RGB mean for DIV2K
         rgb_mean = np.array([0.4488, 0.4371, 0.4040])
