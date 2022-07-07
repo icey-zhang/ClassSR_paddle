@@ -23,7 +23,7 @@ def initialize_weights(net_l, scale=1): #use
                     scale_bias = 0 * m.bias.numpy()
                     m.bias.set_value(paddle.to_tensor(scale_bias))
             elif isinstance(m, nn.BatchNorm2D):
-                scale_weight = 0 * m.weight.numpy()
+                scale_weight = 1 * m.weight.numpy()
                 m.weight.set_value(paddle.to_tensor(scale_weight))
                 scale_bias = 0 * m.bias.numpy()
                 m.bias.set_value(paddle.to_tensor(scale_bias))
@@ -46,7 +46,7 @@ def initialize_weights_nonSequential(net_l, scale=1): #use
                 scale_bias = 0 * m.bias.numpy()
                 m.bias.set_value(paddle.to_tensor(scale_bias))
         elif isinstance(m, nn.BatchNorm2D):
-            scale_weight = 0 * m.weight.numpy()
+            scale_weight = 1 * m.weight.numpy()
             m.weight.set_value(paddle.to_tensor(scale_weight))
             scale_bias = 0 * m.bias.numpy()
             m.bias.set_value(paddle.to_tensor(scale_bias))
